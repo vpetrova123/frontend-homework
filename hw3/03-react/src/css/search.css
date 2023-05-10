@@ -1,0 +1,23 @@
+.card {
+  width: 198px;
+  background-color: MediumAquaMarine;
+  border-color: transparent;
+}
+
+.card:hover {
+  background-color: tomato;
+  color: white;
+}
+
+.characterImg {
+  height: 240px;
+  width: 180px;
+  object-fit: cover;
+}
+
+.characters {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+  gap: 20px;
+}
