@@ -7,7 +7,7 @@ const addToDOM = (character) => {
   const card = document.createElement('div');
   const img = document.createElement('img');
   const body = document.createElement('div');
-  const fullName = document.createElement('h4');
+  const fullName = document.createElement('h2');
   const title = document.createElement('p');
 
   card.className = 'card text-center';
@@ -37,4 +37,11 @@ fetch(url)
     data.forEach((character) => {
       addToDOM(character);
     });
+  })
+  .error((error) => {
+    console.log(error);
+    const app = document.querySelector('section');
+    const errorDiv = document.createElement('p');
+    errorDiv.tagName = 'There was an error.';
+    app.append(errorDiv);
   });
